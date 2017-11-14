@@ -15,7 +15,7 @@ foreach causalscenario in 1 2 3 {
 	
 	global B = 2000 //desired number of iterations of sample generation 
 	
-	include run_simulation_loops_tvU.do
+	include run_simulation_loops_supplemental.do
 	
 	}
 	
