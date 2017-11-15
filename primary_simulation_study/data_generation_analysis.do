@@ -348,11 +348,11 @@ foreach x in 45to55 55to65 65to75 75to85 85to95 {
 *age 45, 50, 55, ..., 95
 foreach x in 45to50 50to55 55to60 60to65 65to70 70to75 75to80 80to85 85to90 90to95 {
 	sum stroke`x' if exposure==0
-	scalar nstrokes`x'_exp0 = r(mean)*r(N)
+	scalar p_stroke`x'_exp0 = r(mean)
 	scalar nstrokes`x'_exp0 = r(mean)*r(N)
 
 	sum stroke`x' if exposure==1
-	scalar nstrokes`x'_exp1 = r(mean)*r(N)
+	scalar p_stroke`x'_exp1 = r(mean)
 	scalar nstrokes`x'_exp1 = r(mean)*r(N)
 }
 /******************************************/
