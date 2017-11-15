@@ -1,5 +1,5 @@
 /**********************************************************************************/
-/***	Scenario $causalscenario (1=A, 2=B, 3=C)								***/
+/***	Scenario $causalscenario (1_supplemental=A*, 2_supplemental=B*, 3_supplemental=C*)								***/
 /***	Modify the local parameters by changing the preamble file called		***/
 /***	to modify the scenario.													***/ 
 /**********************************************************************************/
@@ -7,15 +7,14 @@
 set more off
 clear
 
-*set seed 7208113									//----------------------temporary to set the seed in this file---update after done cleaning!!!!!!!!
 
 /*Create blank data set*/
-set obs 40000 //1000000 //creates blank dataset with XXXXX observations	//----------------------temporary increase in sample size for data cleaning!!!
+set obs 40000 //creates blank dataset with XXXXX observations	
 gen id = _n
 
 
 /*Step 1: Set parameters*/
-do preamble_${causalscenario}_tvU.do	
+do preamble_${causalscenario}_supplemental.do	
 
 *specify prevalence of exposure
 local pexp = $pexp 	
