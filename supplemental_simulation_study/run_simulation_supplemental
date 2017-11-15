@@ -104,7 +104,7 @@ foreach x in N N_exp1 N_exp0 ///
 
 /*Run simulation*/
 simulate `simlist', ///
-reps(`B') seed(67208113): do data_generation_analysis_loops_v3_timevaryingU_v5
+reps(`B') seed(67208113): do data_generation_analysis_supplemental
 
 *number of individuals
 local N = N
